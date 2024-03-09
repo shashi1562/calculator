@@ -1,10 +1,36 @@
 <script setup lang="ts">
-    import NumbersInput from './NumbersInput.vue'
-    import Buttons from './Buttons.vue'
+    import { ref } from 'vue'
+    import NumbersInput from './NumbersInput.vue';
+    import Buttons from './Buttons.vue';
+    const inputValue = ref('');
+
+    function handleDelete() {
+        if (inputValue.value) {
+            inputValue.value = inputValue.value.slice(0, inputValue.value.length - 1);
+        }
+    }
+
+    function handleReset() {
+        inputValue.value = '';
+    }
+
+    function handleAddChar(char: string) {
+        inputValue.value += char;
+    }
+
+    function handleCalculate() {
+        inputValue.value = `${eval(inputValue.value)}`;
+    }
 </script>
+
 <template>
     <div>
-        <NumbersInput />
-        <Buttons />
+        <NumbersInput :inputValue />
+        <Buttons 
+            @reset="handleReset"
+            @delete="handleDelete"
+            @addchar="handleAddChar"
+            @calculate="handleCalculate"
+        />
     </div>
 </template>

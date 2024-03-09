@@ -18,7 +18,6 @@
     >
         <Head
             :theme
-            :changeTheme
             @themechange="changeTheme"
         />
         <CalculatorBody />

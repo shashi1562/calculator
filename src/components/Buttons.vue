@@ -25,4 +25,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .btn {
+        font-family: "League Spartan", sans-serif;
+        font-size: 2rem;
+    }
 </style>
