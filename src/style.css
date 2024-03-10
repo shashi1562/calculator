@@ -24,15 +24,17 @@ body {
     --color-secondary-background: hsl(223, 31%, 20%);
     --color-screen-background: hsl(224, 36%, 15%);
 
-    --color-key-back: hsl(225, 21%, 49%);
-    --color-key-shadow: hsl(224, 28%, 35%);
+    --color-key-special-back: hsl(225, 21%, 49%);
+    --color-key-special-shadow: hsl(224, 28%, 35%);
     --color-key-toggle-back: hsl(6, 63%, 50%);
     --color-key-toggle-shadow: hsl(6, 70%, 34%);
-    --color-key-special-back: hsl(30, 25%, 89%);
-    --color-key-special-shadow: hsl(28, 16%, 65%);
+    --color-key-back: hsl(30, 25%, 89%);
+    --color-key-shadow: hsl(28, 16%, 65%);
 
-    --color-text: hsl(221, 14%, 31%);
-    --color-text-secondary: hsl(0, 0%, 100%);
+    --color-text-upper: hsl(0, 0%, 100%);
+    --color-text-key: hsl(221, 14%, 31%);
+    --color-text-key-special: hsl(0, 0%, 100%);
+    --color-text-key-submit: hsl(0, 0%, 100%);
 }
 
 .theme-2 {
@@ -40,15 +42,17 @@ body {
     --color-secondary-background: hsl(0, 5%, 81%);
     --color-screen-background: hsl(0, 0%, 93%);
 
-    --color-key-back: hsl(185, 42%, 37%);
-    --color-key-shadow: hsl(185, 58%, 25%);
+    --color-key-special-back: hsl(185, 42%, 37%);
+    --color-key-special-shadow: hsl(185, 58%, 25%);
     --color-key-toggle-back: hsl(25, 98%, 40%);
     --color-key-toggle-shadow: hsl(25, 99%, 27%);
-    --color-key-special-back: hsl(45, 7%, 89%);
-    --color-key-special-shadow: hsl(35, 11%, 61%);
+    --color-key-back: hsl(45, 7%, 89%);
+    --color-key-shadow: hsl(35, 11%, 61%);
 
-    --color-text: hsl(60, 10%, 19%);
-    --color-text-secondary: hsl(0, 0%, 100%);
+    --color-text-upper: hsl(60, 10%, 19%);
+    --color-text-key: hsl(60, 10%, 19%);
+    --color-text-key-special: hsl(0, 0%, 100%);
+    --color-text-key-submit: hsl(0, 0%, 100%);
 }
 
 .theme-3 {
@@ -56,16 +60,17 @@ body {
     --color-secondary-background: hsl(268, 71%, 12%);
     --color-screen-background: hsl(268, 71%, 12%);
 
-    --color-key-back: hsl(281, 89%, 26%);
-    --color-key-shadow: hsl(285, 91%, 52%);
+    --color-key-special-back: hsl(281, 89%, 26%);
+    --color-key-special-shadow: hsl(285, 91%, 52%);
     --color-key-toggle-back: hsl(176, 100%, 44%);
     --color-key-toggle-shadow: hsl(177, 92%, 70%);
-    --color-key-special-back: hsl(268, 47%, 21%);
-    --color-key-special-shadow: hsl(290, 70%, 36%);
+    --color-key-back: hsl(268, 47%, 21%);
+    --color-key-shadow: hsl(290, 70%, 36%);
 
-    --color-text: hsl(52, 100%, 62%);
-    --color-text-secondary: hsl(0, 0%, 100%);
-    --color-text-third: hsl(198, 20%, 13%);
+    --color-text-upper: hsl(52, 100%, 62%);
+    --color-text-key: hsl(52, 100%, 62%);
+    --color-text-key-special: hsl(0, 0%, 100%);
+    --color-text-key-submit: hsl(198, 20%, 13%);
 }
 
 

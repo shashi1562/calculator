@@ -37,6 +37,18 @@
         border-radius: 0.5rem;
         border-style: none;
         box-sizing: border-box;
+        background-color: var(--color-key-back);
+        color: var(--color-text-key);
+    }
+
+    .btn-del {
+        background-color: var(--color-key-special-back);
+        color: var(--color-text-key-special);
+    }
+
+    .btn-submit {
+        background-color: var(--color-key-toggle-back);
+        color: var(--color-text-key-submit);
     }
 
     .btn-bottom {
