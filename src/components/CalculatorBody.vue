@@ -24,6 +24,9 @@
         if (lastActionWasCalc.value && (Number.isFinite(+char) || char === '.')) {
             handleReset();
         }
+        if ('./-+x'.includes(char) && './-+x'.includes(inputValue.value[inputValue.value.length - 1])) {
+            handleDelete();
+        }
         inputValue.value += char;
         lastActionWasCalc.value = false;
     }
@@ -36,7 +39,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="calculatorBody">
         <NumbersInput :inputValue />
         <Buttons 
             @reset="handleReset"
@@ -46,3 +49,11 @@
         />
     </div>
 </template>
+
+<style>
+    .calculatorBody {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

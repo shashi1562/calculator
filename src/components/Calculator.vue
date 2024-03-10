@@ -14,18 +14,20 @@
 <template>
     <div
         :class="className"
-        class="container"
+        class="back"
     >
-        <Head
-            :theme
-            @themechange="changeTheme"
-        />
-        <CalculatorBody />
+        <div class="container">
+            <Head
+                :theme
+                @themechange="changeTheme"
+            />
+            <CalculatorBody />
+        </div>
     </div>
 </template>
 
 <style scoped>
-    .container {
+    .back {
         background-color: var(--color-main-background);
         width: 100vw;
         height: 100vh;
@@ -33,5 +35,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container {
+        max-width: 25rem;
     }
 </style>
