@@ -1,4 +1,4 @@
-name: Deploy to GH Pages
+name: Deploy
 
 on:
   push:
@@ -6,34 +6,44 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
-      - uses: actions/checkout@master
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 8
-          persist-credentials: false
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Setup Node
         uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          name: production-files
+          path: ./dist
 
-      - name: Install 🔧
-        run: pnpm install
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
-      - name: Build 🏗️
-        run: pnpm run build
-        env:
-          NODE_ENV: production
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
 
-      - name: Deploy to GH Pages 🚀
-        if: ${{ github.event_name != 'pull_request' }}
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: ./dist
