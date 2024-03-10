@@ -5,12 +5,12 @@
     const inputValue = ref('');
     const lastActionWasCalc = ref(false);
 
-    function handledelete() {
+    function handleDelete() {
         if (lastActionWasCalc.value) {
-            handlereset();
+            handleReset();
         }
 
-        if (inputvalue.value) {
+        if (inputValue.value) {
             inputValue.value = inputValue.value.slice(0, inputValue.value.length - 1);
         }
     }
