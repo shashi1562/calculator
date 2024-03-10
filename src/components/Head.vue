@@ -7,7 +7,7 @@
     const calcTheme = ref(props.theme)
 </script>
 <template>
-    <div>
+    <div class="head">
         <h1>
             calc
         </h1>
@@ -33,3 +33,8 @@
     </div>
 </template>
 
+<style>
+    .head {
+        color: var(--color-text-upper);
+    }
+</style>
