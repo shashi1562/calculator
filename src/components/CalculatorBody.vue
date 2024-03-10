@@ -21,7 +21,7 @@
     }
 
     function handleAddChar(char: string) {
-        if (lastActionWasCalc.value && (!isNaN(char) || char === '.')) {
+        if (lastActionWasCalc.value && (Number.isFinite(+char) || char === '.')) {
             handleReset();
         }
         inputValue.value += char;
