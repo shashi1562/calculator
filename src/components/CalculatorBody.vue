@@ -3,23 +3,35 @@
     import NumbersInput from './NumbersInput.vue';
     import Buttons from './Buttons.vue';
     const inputValue = ref('');
+    const lastActionWasCalc = ref(false);
 
-    function handleDelete() {
-        if (inputValue.value) {
+    function handledelete() {
+        if (lastActionWasCalc.value) {
+            handlereset();
+        }
+
+        if (inputvalue.value) {
             inputValue.value = inputValue.value.slice(0, inputValue.value.length - 1);
         }
     }
 
     function handleReset() {
         inputValue.value = '';
+        lastActionWasCalc.value = false;
     }
 
     function handleAddChar(char: string) {
+        if (lastActionWasCalc.value && (!isNaN(char) || char === '.')) {
+            handleReset();
+        }
         inputValue.value += char;
+        lastActionWasCalc.value = false;
     }
 
     function handleCalculate() {
-        inputValue.value = `${eval(inputValue.value)}`;
+        let resultString = inputValue.value.replace("x", "*");
+        inputValue.value = `${eval(resultString)}`;
+        lastActionWasCalc.value = true;
     }
 </script>
 
