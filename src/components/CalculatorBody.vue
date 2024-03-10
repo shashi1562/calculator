@@ -29,7 +29,7 @@
         <Buttons 
             @reset="handleReset"
             @delete="handleDelete"
-            @addchar="handleAddChar"
+            @add-char="handleAddChar"
             @calculate="handleCalculate"
         />
     </div>
