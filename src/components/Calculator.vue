@@ -39,6 +39,8 @@
     }
 
     .container {
-        width: 22rem;
+        width: 80vw;
+        min-width: 21rem;
+        max-width: 25rem;
     }
 </style>
