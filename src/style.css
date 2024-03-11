@@ -19,6 +19,10 @@ body {
   min-height: 100vh;
 }
 
+#app {
+    width: 100%;
+}
+
 .theme-1 {
     --color-main-background: hsl(222, 26%, 31%);
     --color-secondary-background: hsl(223, 31%, 20%);

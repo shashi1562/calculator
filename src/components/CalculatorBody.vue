@@ -8,6 +8,7 @@
     function handleDelete() {
         if (lastActionWasCalc.value) {
             handleReset();
+            return;
         }
 
         if (inputValue.value) {
@@ -21,10 +22,13 @@
     }
 
     function handleAddChar(char: string) {
+        if (!inputValue.value && '/x+'.includes(char)) return; 
+        const numbers = inputValue.value.split(/\+|-|\/|x/i);
+        if (char === '.' && numbers[numbers.length - 1].includes('.')) return;
         if (lastActionWasCalc.value && (Number.isFinite(+char) || char === '.')) {
             handleReset();
         }
-        if ('./-+x'.includes(char) && './-+x'.includes(inputValue.value[inputValue.value.length - 1])) {
+        if ('/-+x'.includes(char) && './-+x'.includes(inputValue.value[inputValue.value.length - 1])) {
             handleDelete();
         }
         inputValue.value += char;
@@ -32,7 +36,7 @@
     }
 
     function handleCalculate() {
-        let resultString = inputValue.value.replace("x", "*");
+        const resultString = inputValue.value.replace("x", "*");
         inputValue.value = `${eval(resultString)}`;
         lastActionWasCalc.value = true;
     }
