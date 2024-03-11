@@ -23,6 +23,11 @@ body {
     width: 100%;
 }
 
+* {
+    transition: color 150ms;
+    transition: background-color 150ms;
+}
+
 .theme-1 {
     --color-main-background: hsl(222, 26%, 31%);
     --color-secondary-background: hsl(223, 31%, 20%);
