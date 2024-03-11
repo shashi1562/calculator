@@ -39,6 +39,6 @@
     }
 
     .container {
-        max-width: 25rem;
+        width: 22rem;
     }
 </style>

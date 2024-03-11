@@ -37,18 +37,28 @@
         border-radius: 0.5rem;
         border-style: none;
         box-sizing: border-box;
+        cursor: pointer;
         background-color: var(--color-key-back);
         color: var(--color-text-key);
+        -webkit-box-shadow: 0px 6px 0px 0px var(--color-key-shadow);
+        -moz-box-shadow: 0px 6px 0px 0px var(--color-key-shadow);
+        box-shadow: 0px 6px 0px 0px var(--color-key-shadow);
     }
 
     .btn-del {
         background-color: var(--color-key-special-back);
         color: var(--color-text-key-special);
+        -webkit-box-shadow: 0px 6px 0px 0px var(--color-key-special-shadow);
+        -moz-box-shadow: 0px 6px 0px 0px var(--color-key-special-shadow);
+        box-shadow: 0px 6px 0px 0px var(--color-key-special-shadow);
     }
 
     .btn-submit {
         background-color: var(--color-key-toggle-back);
         color: var(--color-text-key-submit);
+        -webkit-box-shadow: 0px 6px 0px 0px var(--color-key-toggle-shadow);
+        -moz-box-shadow: 0px 6px 0px 0px var(--color-key-toggle-shadow);
+        box-shadow: 0px 6px 0px 0px var(--color-key-toggle-shadow);
     }
 
     .btn-bottom {
