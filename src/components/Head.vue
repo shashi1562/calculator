@@ -84,6 +84,7 @@
         appearance: none;
         background: transparent;
         width: 4.5rem;
+        cursor: pointer;
     }
 
     input[type="range"]::-webkit-slider-runnable-track {
@@ -100,5 +101,9 @@
         background-color: var(--color-key-toggle-back);
         width: 1rem;
         border-radius: 1rem;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+        background-color: var(--color-key-toggle-back-hover);
     }
 </style>

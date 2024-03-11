@@ -45,6 +45,10 @@
         box-shadow: 0px 6px 0px 0px var(--color-key-shadow);
     }
 
+    .btn:hover {
+        background-color: var(--color-key-back-hover);
+    }
+
     .btn-del {
         background-color: var(--color-key-special-back);
         color: var(--color-text-key-special);
@@ -53,12 +57,20 @@
         box-shadow: 0px 6px 0px 0px var(--color-key-special-shadow);
     }
 
+    .btn-del:hover {
+        background-color: var(--color-key-special-back-hover);
+    }
+
     .btn-submit {
         background-color: var(--color-key-toggle-back);
         color: var(--color-text-key-submit);
         -webkit-box-shadow: 0px 6px 0px 0px var(--color-key-toggle-shadow);
         -moz-box-shadow: 0px 6px 0px 0px var(--color-key-toggle-shadow);
         box-shadow: 0px 6px 0px 0px var(--color-key-toggle-shadow);
+    }
+
+    .btn-submit:hover {
+        background-color: var(--color-key-toggle-back-hover);
     }
 
     .btn-bottom {
