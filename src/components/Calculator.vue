@@ -2,14 +2,11 @@
     import { ref, computed } from 'vue'
     import Head from './Head.vue'
     import CalculatorBody from './CalculatorBody.vue'
-    const theme = ref(1);
+    const theme = ref(3);
     const className = computed(() => {
         return "theme-" + theme.value;
     });
 
-    function changeTheme(newTheme: string) {
-        theme.value = +newTheme;
-    }
 </script>
 <template>
     <div
@@ -19,7 +16,6 @@
         <div class="container">
             <Head
                 :theme
-                @themechange="changeTheme"
             />
             <CalculatorBody />
         </div>

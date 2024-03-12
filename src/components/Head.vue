@@ -9,32 +9,8 @@
 <template>
     <div class="head">
         <h1 class="headName">
-            calc
+            calculator
         </h1>
-
-        <div class="themeChanger">
-            <label for="theme" class="label">Theme</label>
-            <input
-                type="range"
-                min="1"
-                max="3"
-                @change="$emit('themechange', calcTheme)"
-                v-model="calcTheme"
-                id="theme"
-                name="theme"
-            >
-            <div class="marks">
-                <span class="mark">
-                    1
-                </span>
-                <span class="mark">
-                    2
-                </span>
-                <span class="mark">
-                    3
-                </span>
-            </div>
-        </div>
     </div>
 </template>
 
