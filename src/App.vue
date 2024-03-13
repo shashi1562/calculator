@@ -1,7 +1,9 @@
-<script setup>
-    import Calculator from './components/Calculator.vue'
-</script>
 <template>
-    <Calculator />
+    <router-view /> 
 </template>
+<script>
+   export default {
+      name: 'App',
+   }
+</script>
 
